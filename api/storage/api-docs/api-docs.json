@@ -303,12 +303,12 @@
                 "operationId": "0c71439e213e1b284fc37995d74bca2b",
                 "responses": {
                     "200": {
-                        "description": "List of authors"
+                        "description": "List of authorss"
                     }
                 },
                 "security": [
                     {
-                        "bearerAuth": []
+                        "bearer_token": []
                     }
                 ]
             },
@@ -383,7 +383,7 @@
                 },
                 "security": [
                     {
-                        "bearerAuth": []
+                        "bearer_token": []
                     }
                 ]
             }
@@ -429,7 +429,7 @@
                 },
                 "security": [
                     {
-                        "bearerAuth": []
+                        "bearer_token": []
                     }
                 ]
             },
@@ -531,7 +531,7 @@
                 },
                 "security": [
                     {
-                        "bearerAuth": []
+                        "bearer_token": []
                     }
                 ]
             },
@@ -608,7 +608,7 @@
                 },
                 "security": [
                     {
-                        "bearerAuth": []
+                        "bearer_token": []
                     }
                 ]
             }
@@ -1533,5 +1533,16 @@
             "name": "Users",
             "description": "Users"
         }
-    ]
+    ],
+    "components": {
+        "securitySchemes": {
+            "bearer_token": {
+                "type": "http",
+                "scheme": "bearer",
+                "description": "Enter token in format \"Bearer token\".",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    }
 }
