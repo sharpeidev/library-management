@@ -15,13 +15,13 @@ class AuthorController extends Controller
 
     /**
      * @OA\Get(
-     *     security={{"bearerAuth":{}}},
+     *     security={{"bearer_token":{}}},
      *     path="/api/authors",
      *     summary="List all authors",
      *     tags={"Authors"},
      *     @OA\Response(
      *         response=200,
-     *         description="List of authors",
+     *         description="List of authorss",
      *     )
      * )
      */
@@ -32,7 +32,7 @@ class AuthorController extends Controller
 
     /**
      * @OA\Post(
-     *     security={{"bearerAuth":{}}},
+     *     security={{"bearer_token":{}}},
      *     path="/api/authors",
      *     summary="Create a new author",
      *     tags={"Authors"},
@@ -80,7 +80,7 @@ class AuthorController extends Controller
 
     /**
      * @OA\Get(
-     *     security={{"bearerAuth":{}}},
+     *     security={{"bearer_token":{}}},
      *     path="/authors/{author}",
      *     summary="Get a specific author",
      *     tags={"Authors"},
@@ -111,7 +111,7 @@ class AuthorController extends Controller
 
     /**
      * @OA\Put(
-     *     security={{"bearerAuth":{}}},
+     *     security={{"bearer_token":{}}},
      *     path="/authors/{author}",
      *     summary="Update a specific author",
      *     tags={"Authors"},
@@ -172,7 +172,7 @@ class AuthorController extends Controller
 
     /**
      * @OA\Delete(
-     *     security={{"bearerAuth":{}}},
+     *     security={{"bearer_token":{}}},
      *     path="/authors/{author}",
      *     summary="Delete a specific author",
      *     tags={"Authors"},
@@ -220,16 +220,6 @@ class AuthorController extends Controller
 
     /**
      * @OA\Components(
-     *     @OA\SecurityScheme(
-     *         type="http",
-     *         description="Use a Bearer token to authenticate",
-     *         name="Bearer Token",
-     *         in="header",
-     *         scheme="bearer",
-     *         bearerFormat="JWT"
-     *         securityScheme="bearerAuth",
-     *     ),
-     *
      *     @OA\Schema(
      *         schema="Author",
      *         type="object",

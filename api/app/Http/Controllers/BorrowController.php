@@ -22,7 +22,7 @@ class BorrowController extends Controller
      *     path="/api/borrows",
      *     summary="Get a list of all borrows with users and books",
      *     tags={"Borrows"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Response(
      *         response=200,
      *         description="List of borrows with users and books",
@@ -39,7 +39,7 @@ class BorrowController extends Controller
      *     path="/api/borrows",
      *     summary="Create a new borrow",
      *     tags={"Borrows"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
@@ -97,7 +97,7 @@ class BorrowController extends Controller
      *     path="/api/borrows/{id}",
      *     summary="Get a specific borrow by ID",
      *     tags={"Borrows"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -129,7 +129,7 @@ class BorrowController extends Controller
      *     path="/api/borrows/{id}",
      *     summary="Update a specific borrow",
      *     tags={"Borrows"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -187,7 +187,7 @@ class BorrowController extends Controller
      *     path="/api/borrows/{id}",
      *     summary="Delete a specific borrow",
      *     tags={"Borrows"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -244,13 +244,6 @@ class BorrowController extends Controller
 
     /**
      * @OA\Components(
-     *     @OA\SecurityScheme(
-     *         securityScheme="bearerAuth",
-     *         type="http",
-     *         scheme="bearer",
-     *         bearerFormat="JWT"
-     *     ),
-     *
      *     @OA\Schema(
      *         schema="Borrow",
      *         type="object",

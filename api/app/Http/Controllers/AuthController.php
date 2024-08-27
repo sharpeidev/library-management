@@ -126,7 +126,7 @@ class AuthController extends Controller
      *     path="/api/logout",
      *     summary="Logout the user",
      *     tags={"Auth"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Response(
      *         response=200,
      *         description="Logout successful",
@@ -156,7 +156,7 @@ class AuthController extends Controller
      *     path="/api/refresh",
      *     summary="Refresh JWT token",
      *     tags={"Auth"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Response(
      *         response=200,
      *         description="Token refreshed successfully",
@@ -192,12 +192,6 @@ class AuthController extends Controller
 
     /**
      * @OA\Components(
-     *     @OA\SecurityScheme(
-     *         securityScheme="bearerAuth",
-     *         type="http",
-     *         scheme="bearer",
-     *         bearerFormat="JWT"
-     *     ),
      *     @OA\Schema(
      *         schema="User",
      *         type="object",

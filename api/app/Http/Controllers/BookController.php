@@ -19,7 +19,7 @@ class BookController extends Controller
      *     path="/api/books",
      *     summary="Get a list of all books with authors",
      *     tags={"Books"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Response(
      *         response=200,
      *         description="List of books with authors",
@@ -36,7 +36,7 @@ class BookController extends Controller
      *     path="/api/books",
      *     summary="Create a new book",
      *     tags={"Books"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
@@ -93,7 +93,7 @@ class BookController extends Controller
      *     path="/api/books/{id}",
      *     summary="Get a specific book by ID",
      *     tags={"Books"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -125,7 +125,7 @@ class BookController extends Controller
      *     path="/api/books/{id}",
      *     summary="Update a specific book",
      *     tags={"Books"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -194,7 +194,7 @@ class BookController extends Controller
      *     path="/api/books/{id}",
      *     summary="Delete a specific book",
      *     tags={"Books"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -240,13 +240,6 @@ class BookController extends Controller
 
     /**
      * @OA\Components(
-     *     @OA\SecurityScheme(
-     *         securityScheme="bearerAuth",
-     *         type="http",
-     *         scheme="bearer",
-     *         bearerFormat="JWT"
-     *     ),
-     *
      *     @OA\Schema(
      *         schema="Book",
      *         type="object",

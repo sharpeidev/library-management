@@ -18,7 +18,7 @@ class UserController extends Controller
      *     path="/api/users",
      *     summary="List all users",
      *     tags={"Users"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Response(
      *         response=200,
      *         description="List of users",
@@ -35,7 +35,7 @@ class UserController extends Controller
      *     path="/api/users/{user}",
      *     summary="Get a specific user",
      *     tags={"Users"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="user",
      *         in="path",
@@ -66,7 +66,7 @@ class UserController extends Controller
      *     path="/api/users/{user}",
      *     summary="Update a specific user",
      *     tags={"Users"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="user",
      *         in="path",
@@ -133,7 +133,7 @@ class UserController extends Controller
      *     path="/api/users/{user}",
      *     summary="Delete a specific user",
      *     tags={"Users"},
-     *     security={{"bearerAuth": {}}},
+     *     security={{"bearer_token":{}}},
      *     @OA\Parameter(
      *         name="user",
      *         in="path",
@@ -178,13 +178,6 @@ class UserController extends Controller
 
     /**
      * @OA\Components(
-     *     @OA\SecurityScheme(
-     *          securityScheme="bearerAuth",
-     *          type="http",
-     *          scheme="bearer",
-     *          bearerFormat="JWT"
-     *      ),
-     *
      *     @OA\Schema(
      *         schema="User",
      *         type="object",
