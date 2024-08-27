@@ -35,7 +35,7 @@ cd library-management
 
 Cria o .env
 ```sh
-cp .env.example .env
+cp api/.env.example api/.env
 ```
 
 Inicializa os containers Docker
