@@ -33,6 +33,11 @@ git clone git@github.com:sharpeidev/library-management.git
 cd library-management
 ```
 
+Cria o .env
+```sh
+cp .env.example .env
+```
+
 Inicializa os containers Docker
 ```sh
 docker compose up -d
